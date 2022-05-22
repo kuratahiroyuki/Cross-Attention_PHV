@@ -53,7 +53,7 @@ def training_w2v_model(args):
     
 def main():
     parser = argparse.ArgumentParser()
-    subparsers = parser.add_subparsers(dest="sub_command", help="lstm_phv: this is a CLI to use LSTM-PHV")
+    subparsers = parser.add_subparsers(dest="sub_command", help="aphv: this is a CLI to use Cross-Attention PHV")
     subparsers.required = True
     
     deep_train_parser = subparsers.add_parser("train_deep", help = "sub-command <train> is used for training a deep learning model for PPI prediction")
@@ -77,7 +77,7 @@ def main():
     pred_parser.add_argument('-i', '--import_file', help = 'Path of data file (.csv)', required = True)
     pred_parser.add_argument('-o', '--out_dir', help = 'Directory to output results', required = True)
     pred_parser.add_argument('-w', '--w2v_model_file', help = 'Path of a trained word2vec model', required = True)
-    pred_parser.add_argument('-d', '--deep_model_file', help = 'Path of a trained lstm-phv model', required = True)
+    pred_parser.add_argument('-d', '--deep_model_file', help = 'Path of a trained aphv model', required = True)
     pred_parser.add_argument('-vec', '--vec_index', help = 'Flag whether features output', action='store_true', default = False)
     pred_parser.add_argument('-thr', '--threshold', help = 'Threshold to determined whether interact or not', default = 0.5, type = float)
     pred_parser.add_argument('-batch', '--batch_size', help = 'Batch size', default = 32, type = int)
