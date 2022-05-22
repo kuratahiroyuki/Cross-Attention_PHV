@@ -31,9 +31,9 @@ This package is used for protein-protein interaction (PPI) prediction
 Execute the following command in the directory where the package is located.  
 `$pip install ./Attention-PHV/dist/Attention-PHV-0.0.1.tar.gz`
 
-Pytorch must be installed depending on the user environment.
-Refer to the following page.
-https://pytorch.org/get-started/previous-versions/
+Pytorch must be installed depending on the user environment.  
+Refer to the following page.  
+https://pytorch.org/get-started/previous-versions/  
 
 ## 2. Training of a word2vec embedding model to encode amino acid sequences
 A word2vec model can be trained by following command.  
