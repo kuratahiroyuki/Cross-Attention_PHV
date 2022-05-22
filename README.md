@@ -1,8 +1,8 @@
-# Attention-PHV
+# Cross-attention PHV
 This package is used for protein-protein interaction (PPI) prediction
 
 # Features
-・Attention-PHV predicts PPI by amino acid sequences alone.    
+・Cross-attention PHV predicts PPI by amino acid sequences alone.    
 
 # Environment
     Python   : 3.8.0
@@ -12,7 +12,7 @@ This package is used for protein-protein interaction (PPI) prediction
 # Processing
  This CLI system is used for three processing as follows.  
  ・Training of a word2vec embedding model to encode amino acid sequences.  
- ・Training of Attention-PHV model for PPI prediction.  
+ ・Training of Cross-attention PHV model for PPI prediction.  
  ・PPI prediction.  
 
 # preparation and installation
@@ -27,7 +27,7 @@ This package is used for protein-protein interaction (PPI) prediction
     ex)  
     `$ conda activate attention_phv_network`
     
-## 1. Installing the Attention-PHV package
+## 1. Installing the Cross-attention PHV package
 Execute the following command in the directory where the package is located.  
 `$pip install ./Attention-PHV/dist/Attention-PHV-0.0.1.tar.gz`
 
@@ -58,8 +58,8 @@ Filename: AA_model.pt, AA_model.pt.trainables.syn1neg.npy, AA_model.pt.wv.vector
 |AA_model.pt.trainables.syn1neg.npy|word2vec model file (depending on the model size)|
 |AA_model.pt.wv.vectors.npy|word2vec model file (depending on the model size)|
 
-## 3. Training of Attention-PHV model for PPI prediction
-Attention-PHV model for PPI prediction can be trained by following command (Promote the use of GPU-enabled environments).  
+## 3. Training of Cross-attention PHV model for PPI prediction
+Cross-attention PHV model for PPI prediction can be trained by following command (Promote the use of GPU-enabled environments).  
 `$aphv train_deep -t [Training data file path (csv format)] -v [Training data file path (csv format)] -w [word2vec model file path] -o [output dir path]`
 
 ex)  
@@ -108,7 +108,7 @@ other options)
 |-i (--import_file)|Path of data file (.csv)|necessary|-|
 |-o (--out_dir)|Directory to output results|necessary|-|
 |-w (--w2v_model_file)|Path of a trained word2vec model|necessary|-|
-|-d (--deep_model_file)|Path of a trained attention-phv model|necessary|-|
+|-d (--deep_model_file)|Path of a trained cross-attention phv model|necessary|-|
 |-vec (--vec_index)|Flag whether features output|not necessary|False|
 |-thr (--threshold)|Threshold to determined whether interact or not|not necessary|0.5|
 |-batch (--batch_size)|Batch size|not necessary|32|
@@ -135,7 +135,7 @@ Filename: probs.csv, after_cnn_human.joblib, after_cnn_virus.joblib, feature_vec
 |concatenated_feature_vec.joblib|Concatenated feature vectors|
 
 #  Other contents
-We provided sample data, word2vec model, and Attention-PHV model as well as CLI system.
+We provided sample data, word2vec model, and Cross-attention PHV model as well as CLI system.
 Note that sample data is not the benchmark datasets and this is only present the example.
 
               
