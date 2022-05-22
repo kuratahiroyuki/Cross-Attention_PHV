@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: Attention-PHV
+Version: 0.0.1
+Summary: This package called Attention-PHV is used for protein-protein interaction (PPI) prediction
+Author: Kyushu institute of technology. Kurata laboratory.
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8.0
+Classifier: License :: Apache License 2.0
+License-File: LICENSE
+
+UNKNOWN
+

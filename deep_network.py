@@ -63,17 +63,6 @@ class MultiHeadAttention(nn.Module):
         
         return context + Q_spare
     
-class PoswiseFeedForwardNet(nn.Module):
-    def __init__(self, d_model, d_ff):
-        super(PoswiseFeedForwardNet, self).__init__()
-        self.w_1 = nn.Linear(d_model, d_ff)
-        self.w_2 = nn.Linear(d_ff, d_model)
-        self.relu_func = nn.ReLU()  
-
-    def forward(self, inputs):
-        output = self.w_2(self.relu_func(self.w_1(inputs)))
-        return output + inputs
-    
 class CNN_net(nn.Module):
     def __init__(self, d_model_in, d_model_out, kernel_size, stride, pooling = True, dropout = 0.5):
         super(CNN_net, self).__init__()

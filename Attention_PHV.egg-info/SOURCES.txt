@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+deep_network.py
+main.py
+metrics.py
+requirements.txt
+setup.py
+test_model_word2vec.py
+training_model_word2vec.py
+training_w2v_model.py
+Attention_PHV.egg-info/PKG-INFO
+Attention_PHV.egg-info/SOURCES.txt
+Attention_PHV.egg-info/dependency_links.txt
+Attention_PHV.egg-info/entry_points.txt
+Attention_PHV.egg-info/requires.txt
+Attention_PHV.egg-info/top_level.txt
